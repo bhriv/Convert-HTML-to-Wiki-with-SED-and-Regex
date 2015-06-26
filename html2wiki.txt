@@ -1,0 +1,20 @@
+s:<h1>:= :g;s:</h1>: =:g
+s:<h2>:== :g;s:</h2>: ==:g
+s:<h3>:=== :g;s:</h3>: ===:g
+s:<h4>:==== :g;s:</h4>: ====:g
+s:<h5>:===== :g;s:</h5>: =====:g
+s:<h6>:====== :g;s:</h6>: ======:g
+s:<strong><em>:''''':g;s:</em></strong>:''''':g
+s:<strong>:''':g;s:</strong>:''':g
+s:<em>:'':g;s:</em>:'':g
+s:<ul>::g;s:</ul>::g
+s:<ol>::g;s:</ol>::g
+s:<dl>:; :g;s:</dl>::g
+s/<dd>/: /g;s:</dd>::g
+s/<dt>/: /g;s:</dt>::g
+s:<li>:* :g;s:</li>::g
+s:<hr>:----:g
+s:<br>: :g
+s:	::g
+s:<code>:    :g
+s:</code>::g
