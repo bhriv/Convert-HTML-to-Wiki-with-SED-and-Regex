@@ -4,14 +4,18 @@ Convert HTML formatted README files and Documentation into properly formatted Wi
 <strong>Steps:</strong>
 <ol>
   <li>$ cd /path/to/project/</li>
-  <li>Download the three files (wiki.html, wiki.txt, converthtml2wiki.txt) into your project directory, or wherever your Wiki document is located</li>
+  <li>Download and unzip the zip file called 'convert-html-to-wiki-files.zip' into your project directory, or wherever your Wiki document is located. This zip file contains the three setup files (wiki.html, wiki.txt, converthtml2wiki.txt)</li>
   <li>Edit the file 'wiki.html' using your favorite code editor, or any interface that creates HTML tags**</li>
-  <li>Run the following command: $ sed -f converthtml2wiki.txt < wiki.html > wiki.txt</li>
+  <li>Run the following command: <strong>$ sed -f converthtml2wiki.txt < wiki.html > wiki.txt</strong></li>
 </ol>
-<hr>
+<h5>That's it!</h5>
+
 <em>** Note:</em> You can even use Wordpress to generate your HTML tags by creating a new Post/Page using the 'Visual Editor', then change to HTML mode and Copy the generated HTML version of your content. 
 
-<h2>Sed Overview</h2>
+<hr>
+The following information gives some general insight into the command line tool and the use of sed with regex. It is not necessary to read any futher to use the tool, rather follow the instructions above and get back to coding or writing Wiki documentation - in HTML ;)
+
+<h3>Sed Overview</h3>
 General information about using $ sed http://en.flossmanuals.net/command-line/sed/. 
 
 <blockquote>
