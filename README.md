@@ -4,7 +4,7 @@ Convert HTML formatted README files and Documentation into properly formatted Wi
 <strong>Steps:</strong>
 <ol>
   <li>$ cd /path/to/project/</li>
-  <li>Download and unzip the zip file called 'convert-html-to-wiki-files.zip' into your project directory, or wherever your Wiki document is located. This zip file contains the three setup files (wiki.html, wiki.txt, converthtml2wiki.txt)</li>
+  <li>Download or Clone this Repo and move the three setup files (wiki.html, wiki.txt, converthtml2wiki.txt) into your project directory, or wherever your Wiki document is located.</li>
   <li>Edit the file 'wiki.html' using your favorite code editor, or any interface that creates HTML tags**</li>
   <li>Run the following command: <strong>$ sed -f converthtml2wiki.txt < wiki.html > wiki.txt</strong></li>
 </ol>
