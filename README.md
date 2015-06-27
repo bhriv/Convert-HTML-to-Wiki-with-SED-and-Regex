@@ -8,7 +8,7 @@ Convert HTML formatted README files and Documentation into properly formatted Wi
   <li>Edit the file 'wiki.html' using your favorite code editor, or any interface that creates HTML tags**</li>
   <li>Run the following command: <strong>$ sed -f converthtml2wiki.txt < wiki.html > wiki.txt</strong></li>
 </ol>
-<h5>That's it!</h5>
+<h5>That's it! Your HTML formatted Wiki contents from the file 'wiki.html' will now be properly formatted for Wiki and saved into the file called 'wiki.txt'. To share the newly formatted Wiki simply copy/paste to your public or private Wiki URL.</h5>
 
 <em>** Note:</em> You can even use Wordpress to generate your HTML tags by creating a new Post/Page using the 'Visual Editor', then change to HTML mode and Copy the generated HTML version of your content. 
 
