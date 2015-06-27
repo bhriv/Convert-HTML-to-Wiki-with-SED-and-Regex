@@ -1,7 +1,19 @@
-<h1># Convert-HTML-to-Wiki-with-SED-and-Regex</h1>
+<h1>Convert-HTML-to-Wiki-with-SED-and-Regex</h1>
 Convert HTML formatted README files and Documentation into properly formatted Wiki Documents with a single line via the Command Line Tool. 
-  
+
+<strong>Steps:</strong>
+<ol>
+  <li>$ cd /path/to/project/</li>
+  <li>Download the three files (wiki.html, wiki.txt, converthtml2wiki.txt) into your project directory, or whereever your Wiki document is located</li>
+  <li>Edit the file 'wiki.html' using your favorite code editor, or any interface that creates HTML tags**</li>
+  <li>Run the following command: $ sed -f converthtml2wiki.txt < wiki.html > wiki.txt</li>
+</ol>
+
+<em>** Note:</em> You can even use Wordpress to generate your HTML tags by creating a new Post/Page using the 'Visual Editor', then change to HTML mode and Copy the generated HTML version of your content. 
+
 <h2>Sed Overview</h2>
+General information about using $ sed http://en.flossmanuals.net/command-line/sed/. 
+
 <blockquote>
   <ul>
     <li>$ matches the end of a line</li>
@@ -11,7 +23,29 @@ Convert HTML formatted README files and Documentation into properly formatted Wi
   </ul>
 </blockquote>
 
-<h2>General Examples</h2>
+
+<h3>Example: Simple Test</h3>
+$cd /path/to/project/<br>
+Create textfile.txt in your directory<br>
+Add test file contents:
+<blockquote>this has foo then bar then foo then bar<br>
+this has bar then foo then bar then foo</blockquote>
+
+<blockquote>$ cat testfile<br>
+# Expected Output of File Contents<br>
+this has foo then bar then foo then bar<br>
+this has bar then foo then bar then foo</blockquote>
+
+<blockquote>$ sed "s/foo/bar/g" testfile.txt > testfilechanged.txt
+$ cat testchangedfile<br>
+# Expected Output of File Contents<br>
+this has bar then bar then bar then bar<br>
+this has bar then bar then bar then bar</blockquote>
+
+<h4>File Permissions</h4>
+If you are not seeing the expected results being written to the file you may need to change the file permissions using <em>chmod</em>.
+
+<h3>$ sed General Examples</h3>
 Replace word based on subset of letters:
 
 For example, you could change any instance of the words "cat", "can", and "car" to "dog" by using the following:
@@ -30,33 +64,9 @@ dogs cats and kitty
 
 A line changes only if the matching string is where you require it to be; if the same text occurs elsewhere in the sentence it is not be modified.
 
-
 Sed can be passed more than one operation at a time. We can do this by specifying each pattern after an -e option.
 <blockquote>$ echo Gnus eat grass | sed -e "s/Gnus/Penguins/" -e "s/grass/fish/"</blockquote>
 Penguins eat fish.
-
-
-<h2>Example Test</h2>
-Create textfile.txt in your directory
-Add test file contents:
-
-<blockquote>this has foo then bar then foo then bar
-this has bar then foo then bar then foo</blockquote>
-
-<blockquote>$ cat testfile
-# Expected Output of File Contents
-this has foo then bar then foo then bar
-this has bar then foo then bar then foo</blockquote>
-
-<blockquote>$ sed "s/foo/bar/g" testfile.txt > testfilechanged.txt
-$ cat testchangedfile
-# Expected Output of File Contents
-this has bar then bar then bar then bar
-this has bar then bar then bar then bar</blockquote>
-
-More info [http://en.flossmanuals.net/command-line/sed/ here].	
-
-sed "s/<code><h1></code>/HEADER1/g" testfile.txt > testfilechanged.txt
 
 
 
@@ -64,41 +74,10 @@ sed "s/<code><h1></code>/HEADER1/g" testfile.txt > testfilechanged.txt
 By using the -f argument to the sed command, you can feed Sed a list of commands to run. For example, if you put the following patterns in a file called sedcommands:
 
 <blockquote>
-s/foo/bar/g
-s/dog/cat/g
-s/tree/house/g
-s/little/big/g
+s/foo/bar/g<br>
+s/dog/cat/g<br>
+s/tree/house/g<br>
+s/little/big/g<br>
 </blockquote>
 
-You can use this on a single file by entering the following:
-<blockquote>$ sed -f html2wiki.txt < wiki.html > wiki.txt</blockquote>
-<blockquote>$ sed -f html2wiki.txt < README.html > README.md</blockquote>
-
-Find and Replace Tags with sed and regex
-sed -e 's/<code></h1><h1></code>/<h2>/g' -e 's_</h1>_</h2>_g'	
-
-<h2>Full command list for formatting Wiki</h2>
-
-<code>
-s:<h1>:= :g;s:</h1>: =:g
-s:<h2>:<h2>:g;s:</h2>:</h2>:g
-s:<h3>:=<h2>:g;s:</h3>:</h2>=:g
-s:<h4>:==<h2>:g;s:</h4>:</h2>==:g
-s:<h5>:===<h2>:g;s:</h5>:</h2>===:g
-s:<h6>:====<h2>:g;s:</h6>:</h2>====:g
-s:<strong><em>:''''':g;s:</em></strong>:''''':g
-s:<strong>:''':g;s:</strong>:''':g
-s:<em>:'':g;s:</em>:'':g
-s:<ul>::g;s:</ul>::g
-s:<ol>::g;s:</ol>::g
-s:<dl>:; :g;s:</dl>::g
-s/<dd>/: /g;s:</dd>::g
-s/<dt>/: /g;s:</dt>::g
-s:<li>:* :g;s:</li>::g
-s:<hr>:----:g
-s:<br>: :g
-s:	::g
-s:<code>:    :g
-s:</code>::g
-</code>
 
