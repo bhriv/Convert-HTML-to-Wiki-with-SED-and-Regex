@@ -7,7 +7,7 @@ Convert HTML formatted README files and Documentation into properly formatted Wi
     <li>$ matches the end of a line</li>
     <li>^ matches the start of a line</li>
     <li>* matches zero or more occurrences of the previous character</li>
-    <li>[ ] any characters within the brackets will be matched</li>
+    <li>[] any characters within the brackets will be matched</li>
   </ul>
 </blockquote>
 
@@ -40,37 +40,39 @@ Penguins eat fish.
 Create textfile.txt in your directory
 Add test file contents:
 
-this has foo then bar then foo then bar
-this has bar then foo then bar then foo
+<blockquote>this has foo then bar then foo then bar
+this has bar then foo then bar then foo</blockquote>
 
-$ cat testfile
+<blockquote>$ cat testfile
 # Expected Output of File Contents
 this has foo then bar then foo then bar
-this has bar then foo then bar then foo
+this has bar then foo then bar then foo</blockquote>
 
-$ sed "s/foo/bar/g" testfile.txt > testfilechanged.txt
+<blockquote>$ sed "s/foo/bar/g" testfile.txt > testfilechanged.txt
 $ cat testchangedfile
 # Expected Output of File Contents
 this has bar then bar then bar then bar
-this has bar then bar then bar then bar
+this has bar then bar then bar then bar</blockquote>
 
 More info [http://en.flossmanuals.net/command-line/sed/ here].	
 
-sed "s/<h1>/<h2>/g" testfile.txt > testfilechanged.txt
+sed "s/<code><h1></code>/HEADER1/g" testfile.txt > testfilechanged.txt
 
 
 
 <h2>Scripting SED commands</h2>
 By using the -f argument to the sed command, you can feed Sed a list of commands to run. For example, if you put the following patterns in a file called sedcommands:
 
+<blockquote>
 s/foo/bar/g
 s/dog/cat/g
 s/tree/house/g
 s/little/big/g
+</blockquote>
 
 You can use this on a single file by entering the following:
-$ sed -f html2wiki.txt < wiki.html > wiki.txt
-$ sed -f html2wiki.txt < README.html > README.md
+<blockquote>$ sed -f html2wiki.txt < wiki.html > wiki.txt</blockquote>
+<blockquote>$ sed -f html2wiki.txt < README.html > README.md</blockquote>
 
 Find and Replace Tags with sed and regex
 sed -e 's/<code></h1><h1></code>/<h2>/g' -e 's_</h1>_</h2>_g'	
