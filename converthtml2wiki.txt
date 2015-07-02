@@ -13,11 +13,24 @@ s:<ol>::g;s:</ol>::g
 s:<dl>:; :g;s:</dl>::g
 s/<dd>/: /g;s:</dd>::g
 s/<dt>/: /g;s:</dt>::g
-s:<li>:* :g;s:</li>::g
+s:		<li>:* :g
+s:	<li>:* :g
+s:  <li>:* :g
+s: <li>:* :g
+s:<li>:* :g
+s:</li>::g
 s:<hr>:----:g
 s:<br>: :g
-s:	::g
 s:<code>:    :g
 s:</code>::g
-s:#.*::
 s:<!-- .*::
+s:	::g
+s:<style>:    <style>:g
+s:</style>:    </style>:g
+s:#:    #:g
+s:  {:    {:g
+s:  }:    }:g
+s/^<a href=["'"'"']/[/g
+s/["'"'"']$//g
+s:">: :g
+s:</a>:]:g
