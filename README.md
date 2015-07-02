@@ -14,6 +14,10 @@ Your HTML formatted Wiki contents from the file 'wiki.html' will now be properly
 
 <em>** Note:</em> You can even use Wordpress to generate your HTML tags by creating a new Post/Page using the 'Visual Editor', then change to HTML mode and Copy the generated HTML version of your content. 
 
+<h2>Visual Instructions</h2>
+
+<img src="html2wiki-visual-instructions.jpg">
+
 <hr>
 The following information gives some general insight into the command line tool and the use of sed with regex. It is not necessary to read any futher to use the tool, rather follow the instructions above and get back to coding or writing Wiki documentation - in HTML ;)
 
