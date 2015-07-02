@@ -1,0 +1,25 @@
+= Example Number 2 =
+== This is a h2 title ==
+=== This is a h3 title ===
+==== This is a h4 title ====
+===== This is a h5 title =====
+====== This is a h6 title ======
+    This is a nice chunk of code
+'''''Strongly Emphasised Words'''''
+'''Strong words'''
+''Emphasis or Italics''
+
+* List point 1
+* List point 2
+* List point 3
+
+
+* Ordered list point 1
+* Ordered list point 2
+* Ordered list point 3
+
+----
+; Term
+: Definition
+: Definition 2
+<p>Single paragraph. Including a line break.</p>

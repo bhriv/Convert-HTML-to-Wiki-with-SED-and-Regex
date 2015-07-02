@@ -7,6 +7,7 @@ Convert HTML formatted README files and Documentation into properly formatted Wi
   <li>Download or Clone this Repo and move the three setup files (wiki.html, wiki.txt, converthtml2wiki.txt) into your project directory, or wherever your Wiki document is located.</li>
   <li>Edit the file 'wiki.html' using your favorite code editor, or any interface that creates HTML tags**</li>
   <li>Run the following command: <strong>$ sed -f converthtml2wiki.txt < wiki.html > wiki.txt</strong></li>
+  <li>To convert Wiki back to HTML run the following command: <strong>$ sed -f convertwiki2html.txt < wiki-example-2.txt > wiki-example-reversed.html</strong> </li>
 </ol>
 <h5>That's it!</h5>
 Your HTML formatted Wiki contents from the file 'wiki.html' will now be properly formatted for Wiki and saved into the file called 'wiki.txt'. To share the newly formatted Wiki simply copy/paste to your public or private Wiki URL.
@@ -15,6 +16,26 @@ Your HTML formatted Wiki contents from the file 'wiki.html' will now be properly
 
 <hr>
 The following information gives some general insight into the command line tool and the use of sed with regex. It is not necessary to read any futher to use the tool, rather follow the instructions above and get back to coding or writing Wiki documentation - in HTML ;)
+
+<h3>Reverse Process - convert Wiki to HTML</h3>
+Tips: it is best to convert small sections of a Wiki back to HTML if the original Wiki was not drafted using this tool. 
+
+There are some tweaks to the HTML that are required to be done manually for the HTML to be valid (if that is required) if the Wiki was not originally created using this tool. This includes:
+<ul>
+<li><strong>Close List Tags:</strong> LI, UL, OL elements will not include the self closing tags. This should be done using the Autoclose shortcuts listed below.</li>
+<li><strong>Line Breaks</strong> Paragraphy and Bread tags may not be handled in the desired way if the original Wiki was not created using this tool. The document should be reviewed for correct spacing.</li>
+</ul>
+<p>
+  <em>** Note: The manually processes above should only have to be done once when creating a master wiki.html document. Subsequent edits should be done in the wiki.html document and outputted to the wiki.txt document for upload.</em>
+</p>
+
+<!-- sed -f converthtml2wiki.txt < wiki-example.html > wiki-example.txt -->
+<p><strong>Autoclose Open Tags (Sublime Text)</strong></p>
+<ul>
+  <li>For Mac: Alt + Command + .</li>
+  <li>For PC: Alt + .</li>
+  <li>For Linux: Alt + .</li>
+</ul>
 
 <h3>Sed Overview</h3>
 General information about using $ sed http://en.flossmanuals.net/command-line/sed/. 

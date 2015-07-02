@@ -1,3 +1,4 @@
+
 '''''Strongly Emphasised Words'''''
 '''Strong words'''
 ''Emphasis or Italics''
@@ -15,7 +16,7 @@
 ; Term
 : Definition
 : Definition 2
-<p>Single paragraph. Including a line break.</p>
+Single paragraph. Including a line break.
 = This is a h1 title =
 == This is a h2 title ==
 === This is a h3 title ===
