@@ -1,7 +1,3 @@
-
-
-
-
 = Most Common Wiki/HTML Elements =
 '''''Strongly Emphasised Words''''
 '''Strong words''
